@@ -12,34 +12,65 @@
 <body>
     <div class="container">
         <section class="grid grid-template-areas">
-            <input disabled class="display">
+            <input disabled id="input-1" class="display">
 
-            <button class="item clear button-operations">AC</button>
-            <button class="item plus-minus button-operations">+/-</button>
-            <button class="item percent button-operations">%</button>
-            <button class="item buttonision button-operations-right">÷</button>
+            <button onclick="clearinput()" class="item clear button-operations">AC</button>
+            <button onclick="invertvalue()" class="item plus-minus button-operations">+/-</button>
+            <button onclick="divisao('%')" class="item percent button-operations">%</button>
+            <button onclick="fu1('/')" class="item buttonision button-operations-right">÷</button>
 
-            <button class="item seven button-numbers">7</button>
-            <button class="item eight button-numbers">8</button>
-            <button class="item nine button-numbers">9</button>
-            <button class="item multiplication button-operations-right">X</button>
+            <button onclick="fu1('7')" class="item seven button-numbers">7</button>
+            <button onclick="fu1('8')" class="item eight button-numbers">8</button>
+            <button onclick="fu1('9')" class="item nine button-numbers">9</button>
+            <button onclick="fu1('*')" class="item multiplication button-operations-right">X</button>
 
-            <button class="item four button-numbers">4</button>
-            <button class="item five button-numbers">5</button>
-            <button class="item six button-numbers">6</button>
-            <button class="item minus button-operations-right">-</button>
+            <button onclick="fu1('4')" class="item four button-numbers">4</button>
+            <button onclick="fu1('5')" class="item five button-numbers">5</button>
+            <button onclick="fu1('6')" class="item six button-numbers">6</button>
+            <button onclick="fu1('-')" class="item minus button-operations-right">-</button>
 
-            <button class="item one button-numbers">1</button>
-            <button class="item two button-numbers">2</button>
-            <button class="item three button-numbers">3</button>
-            <button class="item plus button-operations-right">+</button>
+            <button onclick="fu1('1')" class="item one button-numbers">1</button>
+            <button onclick="fu1('2')" class="item two button-numbers">2</button>
+            <button onclick="fu1('3')" class="item three button-numbers">3</button>
+            <button onclick="fu1('+')" class="item plus button-operations-right">+</button>
 
-            <button class="item zero button-numbers">0</button>
-            <button class="item point button-numbers">,</button>
-            <button class="item equal button-operations-right">=</button>
+            <button onclick="fu1('0')" class="item zero button-numbers">0</button>
+            <button onclick="fu1('.')" class="item point button-numbers">,</button>
+            <button onclick="calculos()" class="item equal button-operations-right">=</button>
 
         </section>
     </div>
 </body>
+<script>
+
+    function fu1(num) {
+        const input = document.getElementById('input-1').value
+        document.getElementById("input-1").value = input + num
+    }
+
+    function calculos() {
+        const input = document.getElementById('input-1').value
+        document.getElementById('input-1').value = eval(input)
+    }
+    function clearinput() {
+        document.getElementById('input-1').value = ''
+    }
+
+    function invertvalue() {
+        calculos()
+
+        const input = document.getElementById('input-1').value
+        document.getElementById('input-1').value = input * -1
+    }
+
+    function divisao(){
+   const input = document.getElementById("input-1").value
+   document.getElementById("input-1").value =parseInt(num1) / parseInt(num2)
+   
+    }
+
+
+</script>
+
 
 </html>

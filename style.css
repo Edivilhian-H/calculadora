@@ -45,6 +45,9 @@
     border: none;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+    font-size: 26px;
+    color: white;
+    padding-left: 15px;
 }
 
 .button-operations-right{
