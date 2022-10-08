@@ -6,7 +6,7 @@
 
 <h3>Tecnologias utilizadas<h3>
 <p>-HTML</p>
-<p>-SS</p>
+<p>-CSS</p>
 <p>JavaScript</p>
 
 <br>
